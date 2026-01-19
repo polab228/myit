@@ -79,7 +79,7 @@ itmo_replica/
 7. **Access the application**:
    Open your web browser and go to `http://127.0.0.1:8000/accounts/login/` to access the login page.
 
-## Features123
+## Features123123
 
 - User authentication with a simple login page.
 - Dashboard for users after logging in.
