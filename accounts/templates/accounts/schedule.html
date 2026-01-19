@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание</title>
+    <link rel="stylesheet" href="{% static 'accounts/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'accounts/css/line.css' %}">
+    <link rel="stylesheet" href="{% static 'accounts/css/solid.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Расписание занятий</h1>
+        </header>
+        <main>
+            <table class="schedule">
+                <thead>
+                    <tr>
+                        <th>Время</th>
+                        <th>Понедельник</th>
+                        <th>Вторник</th>
+                        <th>Среда</th>
+                        <th>Четверг</th>
+                        <th>Пятница</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00 - 10:30</td>
+                        <td>Математика</td>
+                        <td>Физика</td>
+                        <td>Программирование</td>
+                        <td>Алгебра</td>
+                        <td>История</td>
+                    </tr>
+                    <tr>
+                        <td>10:45 - 12:15</td>
+                        <td>Литература</td>
+                        <td>Химия</td>
+                        <td>Физика</td>
+                        <td>География</td>
+                        <td>Математика</td>
+                    </tr>
+                    <tr>
+                        <td>12:30 - 14:00</td>
+                        <td>Программирование</td>
+                        <td>Литература</td>
+                        <td>Алгебра</td>
+                        <td>История</td>
+                        <td>Физика</td>
+                    </tr>
+                    <tr>
+                        <td>14:15 - 15:45</td>
+                        <td>География</td>
+                        <td>Математика</td>
+                        <td>Химия</td>
+                        <td>Программирование</td>
+                        <td>Литература</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <footer>
+            <p>&copy; 2023 ITMO University</p>
+        </footer>
+    </div>
+    <script src="{% static 'accounts/js/layout-helpers.js' %}"></script>
+    <script src="{% static 'accounts/js/tag.js' %}"></script>
+</body>
+</html>

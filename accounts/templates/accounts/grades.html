@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зачетка - Личный кабинет</title>
+    <link rel="stylesheet" href="{% static 'accounts/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'accounts/css/line.css' %}">
+    <link rel="stylesheet" href="{% static 'accounts/css/solid.css' %}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Зачетка</h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'dashboard' %}">Главная</a></li>
+                    <li><a href="{% url 'grades' %}" class="active">Зачетка</a></li>
+                    <li><a href="{% url 'schedule' %}">Расписание</a></li>
+                    <li><a href="{% url 'finances' %}">Финансы</a></li>
+                    <li><a href="{% url 'electives' %}">Факультативы</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Ваши оценки</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Дисциплина</th>
+                        <th>Оценка</th>
+                        <th>Кредит</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for grade in grades %}
+                    <tr>
+                        <td>{{ grade.subject }}</td>
+                        <td>{{ grade.score }}</td>
+                        <td>{{ grade.credits }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </main>
+        <footer>
+            <p>&copy; 2023 ITMO University</p>
+        </footer>
+    </div>
+    <script src="{% static 'accounts/js/layout-helpers.js' %}"></script>
+    <script src="{% static 'accounts/js/tag.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - ITMO University</title>
+    <link rel="stylesheet" href="{% static 'accounts/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'accounts/css/line.css' %}">
+    <link rel="stylesheet" href="{% static 'accounts/css/solid.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в Личный кабинет</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'grades' %}">Зачетная книжка</a></li>
+                <li><a href="{% url 'schedule' %}">Расписание</a></li>
+                <li><a href="{% url 'finances' %}">Финансы</a></li>
+                <li><a href="{% url 'electives' %}">Факультативы</a></li>
+                <li><a href="{% url 'logout' %}">Выход</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Ваши данные</h2>
+            <p>Имя: {{ user.username }}</p>
+            <p>Регион: {{ user.profile.region }}</p>
+        </section>
+        <section>
+            <h2>Объявления</h2>
+            <ul>
+                <li>Объявление 1</li>
+                <li>Объявление 2</li>
+                <li>Объявление 3</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 ITMO University</p>
+    </footer>
+    <script src="{% static 'accounts/js/layout-helpers.js' %}"></script>
+    <script src="{% static 'accounts/js/tag.js' %}"></script>
+</body>
+</html>

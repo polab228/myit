@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'accounts/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'accounts/css/line.css' %}">
+    <link rel="stylesheet" href="{% static 'accounts/css/solid.css' %}">
+    <title>Выбор факультативов</title>
+</head>
+<body>
+    <header>
+        <h1>Выбор факультативов</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Доступные факультативы</h2>
+            <ul>
+                <li>Факультатив 1</li>
+                <li>Факультатив 2</li>
+                <li>Факультатив 3</li>
+                <li>Факультатив 4</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Записаться на факультатив</h2>
+            <form method="post">
+                {% csrf_token %}
+                <label for="elective">Выберите факультатив:</label>
+                <select id="elective" name="elective">
+                    <option value="1">Факультатив 1</option>
+                    <option value="2">Факультатив 2</option>
+                    <option value="3">Факультатив 3</option>
+                    <option value="4">Факультатив 4</option>
+                </select>
+                <button type="submit">Записаться</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 ITMO University</p>
+    </footer>
+    <script src="{% static 'accounts/js/layout-helpers.js' %}"></script>
+    <script src="{% static 'accounts/js/tag.js' %}"></script>
+</body>
+</html>
